@@ -13,7 +13,7 @@ const [errors,seterrors]=useState({})
 const submit=async (e)=>{
     e.preventDefault();
     try{
-        const res=await axios.post("${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/login",{
+        const res=await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/login`,{
             email,password
         });
           localStorage.setItem("token", res.data.tokens);
@@ -111,7 +111,7 @@ seterrors({general:"Login Failed"})
         {/* Sign Up Link */}
         <p className="text-center mt-3 mb-0">
           Don't have an account?{" "}
-         <Link to="/signin" className="text-decoration-none">Sign in</Link>
+         <Link to="/signup" className="text-decoration-none">Sign Up</Link>
         </p>
       </div>
     </div>

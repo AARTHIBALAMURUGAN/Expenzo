@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import Login from './Login.jsx'
-import SignUp from './Sign-in.jsx'
+import SignUp from './Signup.jsx'
 import {createBrowserRouter,RouterProvider}from 'react-router-dom'
 import Income from './Income.jsx'
 import Expense from './Expense.jsx'
@@ -28,7 +28,7 @@ const router=createBrowserRouter([
     element:<Dashboard/>
   },
   {
-    path:'/signin',
+    path:'/signup',
     element:<SignUp/>
   },
   {

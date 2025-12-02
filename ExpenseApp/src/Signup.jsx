@@ -41,11 +41,11 @@ const navigate=useNavigate();
     if(!Validation())return;
 
         try{
-          const  res=await axios.post("${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/register",{
+          const  res=await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/register`,{
             name,email,password
         })
         alert(res.data.message)
-        navigate("/dashboard")
+        navigate("/")
         setName("");
       setEmail("");
       setPassword("");
